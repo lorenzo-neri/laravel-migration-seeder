@@ -24,7 +24,7 @@ return new class extends Migration
             //orario di partenza
             $table->dateTime('departure_time');
             //orario di arrivo
-            $table->dateTime('arrival_time');
+            $table->dateTime('arrival_time')->nullable();;
             //codice treno
             $table->tinyInteger('train_code')->unsigned();
             //numero carrozze

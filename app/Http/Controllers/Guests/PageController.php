@@ -9,7 +9,8 @@ class PageController extends Controller
 {
     public function index()
     {
-
-        return view('welcome');
+        $message = 'Trenitalia 🇮🇹';
+        $trains = \App\Models\Train::all();
+        return view('welcome', compact('trains', 'message'));
     }
 }
